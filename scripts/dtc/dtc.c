@@ -99,7 +99,8 @@ int main(int argc, char *argv[])
 	const char *inform = "dts";
 	const char *outform = "dts";
 	const char *outname = "-";
-	int force = 0, check = 0, sort = 0;
+        const char *depname = NULL;
+	int force = 0, sort = 0;
 	const char *arg;
 	int opt;
 	FILE *outf = NULL;
@@ -136,9 +137,6 @@ int main(int argc, char *argv[])
 			break;
 		case 'f':
 			force = 1;
-			break;
-		case 'c':
-			check = 1;
 			break;
 		case 'q':
 			quiet++;
