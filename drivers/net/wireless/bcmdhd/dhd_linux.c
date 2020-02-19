@@ -3373,8 +3373,8 @@ dhd_bus_start(dhd_pub_t *dhdp)
 			fw_path, nv_path))) {
 #ifdef CUSTOMER_HW4
 			DHD_ERROR(("%s: dhdsdio_probe_download failed. "
-					"firmware or nvram wrong\n",
-					__FUNCTION__));
+					"firmware or nvram wrong. firmware = %s nvram = %s\n",
+					__FUNCTION__, fw_path, nv_path));
 #else
 			DHD_ERROR(("%s: dhdsdio_probe_download failed. firmware = %s nvram = %s\n",
 				__FUNCTION__, fw_path, nv_path));
